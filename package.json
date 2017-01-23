@@ -1,0 +1,28 @@
+{
+  "name": "insecure-express",
+  "version": "1.0.0",
+  "description": "A very insecure Express application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/warbrett/insecure-express.git"
+  },
+  "author": "Brett Warner <brett@warbrett.com> (www.warbrett.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/warbrett/insecure-express/issues"
+  },
+  "homepage": "https://github.com/warbrett/insecure-express#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-alpha.2",
+    "express": "^4.14.0",
+    "knex": "^0.12.6",
+    "pug": "^2.0.0-beta6",
+    "sqlite3": "^3.1.8"
+  }
+}
