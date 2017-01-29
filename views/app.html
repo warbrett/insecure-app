@@ -35,7 +35,6 @@
         function deletePost(postId) {
           fetch('/posts/' + postId, { method: 'DELETE' })
             .then(() => {
-              console.log('removing element');
               const el = document.getElementById('post-' + postId);
               el.parentNode.removeChild(el);
               messageElement.innerText = "Successfully removed the Post"

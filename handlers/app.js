@@ -7,7 +7,6 @@ function appHandler (req, res) {
 
   getPostData(req.session)
   .then(posts => {
-    console.log('posts', posts);
     res.render('app', { posts });
   });
 }

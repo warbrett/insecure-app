@@ -32,6 +32,5 @@ scaffold()
   registerRoutes(app);
   app.listen(3124, function () {
     console.log('Insecure express app running on port 3124!');
-    knex.select('*').from('users').then(console.log);
   });
 });
