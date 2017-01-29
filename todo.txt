@@ -1,6 +1,6 @@
-A1 - Allow Sql Injection on Login Form
+A2 - Allow Sql Injection on Login Form
 A2 - Allow anyone to delete other peoples posts not just admins
 A3 - XSS, allow users to submit html in posts
-A6 - Sensitive Data Exposure, pass ssn to front
+A6 - Sensitive Data Exposure, usernames displayed as author names on posts
 A8 - CSRF - allow posts from logged in users via cookie or whatever
 

@@ -1,0 +1,46 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello and thanks for logging in!</h1>
+    <h2 id="msg">{{msg}}</h2>
+    <h2>Write a post, see it below!</h2>
+
+    <form method="POST" action="/posts">
+      <div>
+        <label for="postTitle">Title</label>
+        <input type="text" id="postTitle" placeholder="Post Title" name="postTitle" />
+      </div>
+      <div>
+        <label for="postBody">Post Body</label>
+        <input type="text" id="postBody" placeholder="Post Body" name="postBody" />
+      </div>
+        <button type="submit">Create Post</button>
+    </form>
+      <h2>Recent Posts</h2>
+      {{#each posts}}
+      <div id="post-{{this.id}}">
+        <h2>{{this.title}}</h2>
+        <p>{{{this.body}}}</p>
+        {{#if this.author}}
+        <p>Written By You</p>
+        <button onclick="deletePost({{this.id}})">Delete Post</button>
+        {{else}}
+        <p>Written by {{this.username}}</p>
+        {{/if}}
+      </div>
+      {{/each}}
+      <script>
+        const messageElement = document.getElementById("msg");
+        function deletePost(postId) {
+          fetch('/posts/' + postId, { method: 'DELETE' })
+            .then(() => {
+              console.log('removing element');
+              const el = document.getElementById('post-' + postId);
+              el.parentNode.removeChild(el);
+              messageElement.innerText = "Successfully removed the Post"
+            });
+        }
+      </script>
+  </body>
+</html>
