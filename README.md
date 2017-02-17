@@ -1,6 +1,6 @@
 #Insecure Web App
 
-An extremely insecure web app that has at least 5 of the OWASP 10.
+An extremely insecure web app that has five of the OWASP top ten. This was made as a fun bit of practice in making an application intentionally insecure. I wouldn't recommend running it on a device connected to an open network.
 
 
 To build/run
